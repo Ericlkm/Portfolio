@@ -13,6 +13,9 @@ html {
   min-width: 100%;
   color: white;
 }
+li {
+  list-style: none;
+}
 .nanum-gothic-coding-regular {
   font-family: "Nanum Gothic Coding", monospace;
   font-weight: 400;
@@ -45,6 +48,10 @@ html {
     rgba(0, 0, 0, 0.096)
   );
 }
+.navbar img {
+  width: 3rem;
+  border-radius: 50%;
+}
 .nav-title {
   color: rgb(255, 255, 255);
   margin-left: 1rem;
@@ -52,9 +59,6 @@ html {
   font-family: "Rock Salt", cursive;
   transform: translateY(-1rem);
   text-decoration: none;
-}
-.nav-title::before {
-  content: "@ ";
 }
 
 .navbar h1,
@@ -315,9 +319,19 @@ footer {
   width: 80%;
   margin: 3rem auto;
   padding: 1rem 1rem;
-
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideUp 1s ease;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(-20rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .skills-grid {
@@ -373,4 +387,54 @@ footer {
 
 .skill-bar-fill {
   animation: animate-skill-bar 2s ease-in-out;
+}
+
+@media screen and (max-width: 808px) {
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skill {
+    width: 15rem;
+  }
+}
+
+/* projects page  */
+.project-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(175, 175, 175, 0.1);
+  text-align: center;
+  height: 100vh;
+}
+
+.project-box img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-box {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+    margin-bottom: 0;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .project-box img {
+    width: 35rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+    border-radius: 5px;
+  }
 }

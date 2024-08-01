@@ -7,7 +7,10 @@ export default function Navbar() {
         <div>
           <nav className="navbar">
             <Link to="/" className="text-decoration-none">
-              <h1 className="nav-title">Eric's Portfolio</h1>
+              <h1 className="nav-title">
+                <img src="https://cdn-icons-gif.flaticon.com/17122/17122740.gif" />
+                Eric's Portfolio
+              </h1>
             </Link>
             <ul className="nav-item">
               <Link to="/">
