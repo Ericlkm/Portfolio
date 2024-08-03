@@ -10,6 +10,7 @@ function Footer() {
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9i3AjWDb4noRd5J1mb9A2XW-tjedaDS-msA&s"
                 alt="Logo"
+                className="fa-spin"
               />
             </div>
             <div class="footer-social">

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Navbar() {
   return (
@@ -18,7 +19,7 @@ export default function Navbar() {
                   <ruby>
                     Home
                     <rt>
-                      <i className="fas fa-home-alt p-1"></i>
+                      <i className="fas fa-home-alt p-1 fa-bounce"></i>
                     </rt>
                   </ruby>
                 </li>
