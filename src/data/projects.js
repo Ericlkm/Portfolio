@@ -4,6 +4,7 @@ import quiz from "../images/quiz.png";
 import PlanPro from "../images/PlanPro.png";
 import ToDo from "../images/ToDo.png";
 import nt from "../images/nt.png";
+import reactQuiz from "../images/reactQuiz.png";
 
 const Projects = [
   {
@@ -33,7 +34,7 @@ const Projects = [
 
   {
     id: 2,
-    title: "PlanPro",
+    title: "PlanPro 📈",
     description: "A conference planner!",
     image: PlanPro,
     technology: [
@@ -60,6 +61,23 @@ const Projects = [
 
   {
     id: 3,
+    title: "React Quiz®️",
+    description:
+      "This is a simple quiz app built with React. It displays a question, four answer options, and keeps track of the user's score. When the user selects an answer, you see your final score at the end whne quiz is complete.",
+    image: reactQuiz,
+    technology: [
+      "React",
+      "JavaScript",
+      "CSS",
+      "SASS",
+      "ReactRouter",
+      "Bootstrap",
+    ],
+    url: "http://ericreactquiz.netlify.app",
+    codeSource: "https://github.com/Ericlkm/react-QuizApp",
+  },
+  {
+    id: 4,
     title: "FunCast 🎢",
     description:
       "    FunCast! is a web application that allows users to search for theme parks around the world and check the average wait times for attractions and shows weather forecast for that day utilizing openweather API. Overall FunCast is a basic application connecting teo API's.",
@@ -80,7 +98,7 @@ const Projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "ToDo-App",
     description: "A simple ToDo app built with Javascript",
     image: ShelfLife,
@@ -92,7 +110,7 @@ const Projects = [
     codeSource: "https://github.com/Ericlkm/ToDo-List",
   },
   {
-    id: 4,
+    id: 6,
     title: "Note-Taker 📝",
     description: "A simple note taking app built with Javascript",
     image: nt,
@@ -108,7 +126,7 @@ const Projects = [
     codeSource: "http://github.com/ericlkm/note-taker",
   },
   {
-    id: 6,
+    id: 7,
     title: "Quiz",
     description:
       "This application is a basic quiz app displaying coding questions.You will have aboiut a minute to complete the quiz. When you begin the quiz a count down will start and for every question you get wrong 2 seconds will be deducted from timer. Also when clicking on an answer you can click on submit to confirm your answer or change it. once you click submit it will display red for the wrong answer and green for the correct answer are up for a challenge!",

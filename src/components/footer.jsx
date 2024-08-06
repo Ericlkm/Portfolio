@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <footer>
+      <footer id="footer">
         <div class="footer-container">
           <div class="footer-top">
             <div class="footer-logo">
@@ -14,41 +14,25 @@ function Footer() {
               />
             </div>
             <div class="footer-social">
-              <a href="#" className="fab fa-facebook"></a>
-              <a href="#" className="fab fa-twitter"></a>
+              <h4 className="social lilita-one-regular ">
+                Socials <i className="fas fa-arrow-turn-down"></i>
+              </h4>
+              <a
+                href="http://github.com/ericlkm"
+                target="_blank"
+                className="fab fa-github"
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/eric-lkm-72849331b/"
+                target="_blank"
+                className="fab fa-linkedin"
+              ></a>
               <a href="#" className="fab fa-instagram"></a>
-              <a href="#" className="fab fa-linkedin"></a>
-            </div>
-          </div>
-          <div class="footer-middle">
-            <div class="footer-column">
-              <h3>About Us</h3>
-              <ul>
-                <li>
-                  <a href="#">Our Story</a>
-                </li>
-                <li>
-                  <a href="#">Our Team</a>
-                </li>
-                <li>
-                  <a href="#">Our Mission</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer-column">
-              <h3>Get in Touch</h3>
-              <ul>
-                <li>
-                  <a href="#">Contact Us</a>
-                </li>
-                <li>
-                  <a href="#">Support</a>
-                </li>
-                <li>
-                  <a href="#">FAQs</a>
-                </li>
-              </ul>
+              <a
+                href="mailto:gtprinceeric.el1@gmail.com"
+                target="_blank"
+                className="fas fa-mail-bulk"
+              ></a>
             </div>
           </div>
           <div class="footer-bottom">

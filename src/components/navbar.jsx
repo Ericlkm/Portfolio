@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export default function Navbar() {
   return (
@@ -9,8 +8,8 @@ export default function Navbar() {
           <nav className="navbar">
             <Link to="/" className="text-decoration-none">
               <h1 className="nav-title">
-                <img src="https://cdn-icons-gif.flaticon.com/17122/17122740.gif" />
-                Eric's Portfolio
+                Eric.L{" "}
+                <img src="https://cdn-icons-png.flaticon.com/128/2621/2621137.png" />
               </h1>
             </Link>
             <ul className="nav-item">

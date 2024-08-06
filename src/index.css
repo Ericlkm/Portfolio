@@ -8,16 +8,25 @@ html {
   scrollbar-color: rgba(0, 0, 0, 0.712) rgb(255, 255, 255);
 }
 #body {
-  background-color: rgba(0, 0, 0, 0.959);
+  background-color: black;
+  background-size: 500%;
+  background-position: center;
   min-height: 100vh;
   min-width: 100%;
   color: white;
+  animation: bge 5s infinite alternate;
 }
 li {
   list-style: none;
 }
 .nanum-gothic-coding-regular {
   font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lilita-one-regular {
+  font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -34,6 +43,11 @@ li {
   font-weight: 400;
   font-style: normal;
 }
+.timmana-regular {
+  font-family: "Timmana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .major-mono-display-regular {
   font-family: "Major Mono Display", monospace;
@@ -41,13 +55,71 @@ li {
   font-style: normal;
 }
 
-.navbar {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.712),
-    rgba(0, 0, 0, 0.096)
-  );
+.name {
+  background-image: linear-gradient(to bottom, cyan, white, cyan);
+  background-clip: text;
+  font-size: 6rem;
+  color: transparent;
+  animation: fadeIn 2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
+
+.name3 {
+  background-image: linear-gradient(to bottom, yellow, white, yellow, yellow);
+  background-clip: text;
+  color: transparent;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 1s ease-in;
+}
+.home h1 {
+  font-size: 4rem;
+  font-family: "Lilita One", sans-serif;
+  letter-spacing: 5px;
+  animation: slideIn 1s ease-in-out;
+  position: relative;
+}
+.home h1::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in;
+}
+
+.home h1:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myImg {
+  width: 60%;
+  border-radius: 1rem;
+  transform: translateY(-12rem);
+}
+
+.home p {
+  margin-right: 2rem;
+}
+
 .navbar img {
   width: 3rem;
   border-radius: 50%;
@@ -59,6 +131,27 @@ li {
   font-family: "Rock Salt", cursive;
   transform: translateY(-1rem);
   text-decoration: none;
+  text-shadow: 0px 0px 20px cyan;
+  position: relative;
+}
+
+.nav-title::after {
+  content: "Lackram";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 5rem;
+  bottom: 0;
+  left: 0;
+
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-title:hover::after {
+  transform: scaleY(1);
+  transform-origin: top;
 }
 
 .navbar h1,
@@ -86,14 +179,10 @@ a {
   margin: 1rem;
   border-radius: 1rem;
   padding: 1rem;
-  background-image: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.473),
-    rgba(128, 128, 128, 0.123)
-  );
   animation: bge 10s infinite alternate, slideIn 1s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-size: 500%;
+  text-shadow: 1px 0px 5px rgb(169, 252, 252);
 }
 @keyframes slideIn {
   from {
@@ -105,6 +194,7 @@ a {
     transform: translateX(0);
   }
 }
+
 @keyframes bge {
   from {
     background-position: 0% 50%;
@@ -113,27 +203,12 @@ a {
     background-position: 100% 50%;
   }
 }
-.container:hover {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.473);
-}
-.container img {
-  float: left;
-  width: 15rem;
-  border-radius: 1rem;
-  margin-right: 1rem;
-  height: auto;
-  object-fit: cover;
-  transition: all 0.3s ease-in-out;
-}
 
-.container img:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.281);
-}
 .container h1 {
   background-image: linear-gradient(to bottom, cyan, white);
   background-clip: text;
   color: transparent;
+  margin-bottom: 1.5rem;
 }
 .container h3 {
   font-weight: bold;
@@ -154,12 +229,45 @@ a {
   transform: translateY(-5px);
 }
 
+.lang-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-evenly;
+  width: 60rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.lang-icon img {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 30%;
+}
+.lang-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4rem;
+}
+
+.lang-icon img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 40px cyan;
+}
+
 /* footer */
 footer {
   background-color: #333;
   color: #fff;
   padding: 50px 0;
   text-align: center;
+}
+.social {
+  background-image: linear-gradient(to bottom, cyan, white, cyan);
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
 }
 
 .footer-container {
@@ -194,13 +302,107 @@ footer {
 }
 
 .footer-social a {
-  color: #fff;
   margin-left: 10px;
   transition: color 0.2s ease;
 }
 
-.footer-social a:hover {
-  color: #337ab7;
+.footer-social a:nth-child(2) {
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.footer-social a:nth-child(2)::after {
+  content: "Github";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 15%;
+  left: -1rem;
+  font-size: 10px;
+  transform: translateY(-2rem);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+.footer-social a:nth-child(2):hover::after {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.footer-social a:nth-child(3) {
+  color: rgb(2, 99, 255);
+  position: relative;
+}
+.footer-social a:nth-child(3)::after {
+  content: "Linkedin";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 15%;
+  left: -1rem;
+  font-size: 10px;
+  transform: translateY(-2rem);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+.footer-social a:nth-child(3):hover::after {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.footer-social a:nth-child(4) {
+  background-image: linear-gradient(
+    45deg,
+    rgb(176, 0, 176),
+    pink,
+    yellow,
+    cyan
+  );
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+.footer-social a:nth-child(4)::after {
+  content: "Instagram";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 15%;
+  left: -1rem;
+  font-size: 10px;
+  color: rgb(240, 204, 128);
+  transform: translateY(-2rem);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+.footer-social a:nth-child(4):hover::after {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.footer-social a:nth-child(5) {
+  color: #cfff49;
+  position: relative;
+}
+.footer-social a:nth-child(5)::after {
+  content: "Email";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 15%;
+  left: -5px;
+  font-size: 10px;
+  color: yellow;
+  transform: translateY(-2rem);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+.footer-social a:nth-child(5):hover::after {
+  transform: scaleY(1);
+  transform-origin: top;
 }
 
 .footer-middle {
@@ -311,6 +513,16 @@ footer {
   .footer-column {
     width: auto;
   }
+  .home h1 {
+    font-size: 3rem;
+    width: 100%;
+    letter-spacing: 0;
+  }
+  .name {
+    font-size: 3rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 /* skills pages */
@@ -396,6 +608,9 @@ footer {
   }
   .skill {
     width: 15rem;
+  }
+  .home h1 {
+    width: 100%;
   }
 }
 
@@ -492,5 +707,8 @@ footer {
     object-fit: cover;
     border-radius: 0;
     border-radius: 5px;
+  }
+  .lang-icon {
+    width: 30rem;
   }
 }
