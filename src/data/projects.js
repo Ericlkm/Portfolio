@@ -5,7 +5,7 @@ import PlanPro from "../images/PlanPro.png";
 import ToDo from "../images/ToDo.png";
 import nt from "../images/nt.png";
 import reactQuiz from "../images/reactQuiz.png";
-
+import weather from "../images/weather.png";
 const Projects = [
   {
     id: 1,
@@ -134,6 +134,16 @@ const Projects = [
     technology: ["HTML", "JavaScript", "CSS", "SASS"],
     url: "https://ericlkm.github.io/homework4/",
     codeSource: "https://github.com/Ericlkm/homework4",
+  },
+  {
+    id: 8,
+    title: "Weather App",
+    description:
+      "This is my weather application. Using openweather API i can fetch current and future weather forecast. This app i build main purpose is when you search a city name you will get up to a five day forecast!",
+    image: weather,
+    technology: ["HTML", "CSS", "JavaScript", "Openweather API", "JQuery"],
+    url: "https://ericlkm.github.io/homework6/",
+    codeSource: "https://github.com/Ericlkm/homework6",
   },
 ];
 

@@ -24,16 +24,33 @@ function Home() {
           </h1>
           <p style={{ marginTop: "1rem" }}>
             with a passion for learning and building innovative solutions. I
-            recently graduated from the University of Central Florida (UCF) from
-            a coding bootcamp program called EdX with a certificate in Full
-            Stack Web Developement.
+            graduated from the University of Central Florida -{" "}
+            <a
+              href="https://www.ucf.edu/"
+              target="_blank"
+              className="text-decoration-none"
+            >
+              UCF
+            </a>{" "}
+            and successfully completed a coding bootcamp program known as{" "}
+            <a
+              href="https://www.edx.org/"
+              className="text-decoration-none"
+              target="_blank"
+            >
+              edX
+            </a>{" "}
+            earning a certificate in Full Stack Web Developement.
           </p>
           <p>
             I have worked on various projects, from small basic projects to more
             advance difficult applications, showcasing my ability to design and
             develop efficient software solutions. I am currently looking for
             opportunities to collaborate with talented developers to bring their
-            ideas to life. <a href="#footer">Contact Me</a>
+            ideas to life.{" "}
+            <a href="#footer" className="text-decoration-none">
+              Contact Me
+            </a>
           </p>
 
           <section className="container">
